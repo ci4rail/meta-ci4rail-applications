@@ -13,8 +13,8 @@ SRC_URI_append = " file://velog_config.yaml"
 SRC_URI_append = " file://velog.sh"
 
 # Use github-release-checksums.sh script in yoct-images repo to update
-SRC_URI[arm64.md5sum] = "7f236d4ec14c869cf530baba10e263f3"
-SRC_URI[arm64.sha256sum] = "7edc607900e125877cc3e858794caa4ee95567142efbf43b76386f504f1db009"
+SRC_URI[arm64.md5sum] = "9066583c159bcd763d932b6f8543d20c"
+SRC_URI[arm64.sha256sum] = "727dd6c4f4ae181b01318ff170d706186049243ff04a167189aa7771ac5e3c9b"
 
 SYSTEMD_AUTO_ENABLE = "enable"
 SYSTEMD_SERVICE_${BPN} = "${BPN}.service"
@@ -29,6 +29,7 @@ do_install() {
     install -d ${D}${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/${BPN}.service ${D}${systemd_unitdir}/system/${BPN}.service
 }
+RDEPENDS_${PN} = "bash"
 
 FILES_${PN} += "${bindir}/${BPN}_logger"
 FILES_${PN} += "${bindir}/${BPN}"
