@@ -1,0 +1,12 @@
+[Unit]
+Description=Vehicle Data Logger
+After=dhcpd.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/velog_logger --config /etc/velog_config.yaml
+
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -4,7 +4,7 @@ Yocto Software layer for Ci4Rail applications and appliances.
 
 ## Dependencies
 
-TBD
+Currently none.
 
 ## Build
 
