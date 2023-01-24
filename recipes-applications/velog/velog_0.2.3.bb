@@ -13,8 +13,8 @@ SRC_URI_append = " file://velog_config.yaml"
 SRC_URI_append = " file://velog.sh"
 
 # Use github-release-checksums.sh script in yocto-images repo to update
-SRC_URI[arm64.md5sum] = "f55ef3a5f0d295df8402cdee331352c6"
-SRC_URI[arm64.sha256sum] = "9db56e62976c6c276af72ba9eb522462e5cfc9a62632f0e9a3bd10f4f1b2f29e"
+SRC_URI[arm64.md5sum] = "816856952bb934f17d6e4bdb9b9fcbd1"
+SRC_URI[arm64.sha256sum] = "1d7d3105e42f320b6b5b1c4b1c517b0f40388e41cb8d597784bc3c664abf89b7"
 
 SYSTEMD_AUTO_ENABLE = "enable"
 SYSTEMD_SERVICE_${BPN} = "${BPN}.service"
